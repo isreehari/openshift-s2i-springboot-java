@@ -28,8 +28,8 @@ RUN yum install -y java-$JAVA_VERSION-openjdk java-$JAVA_VERSION-openjdk-devel &
     yum clean all -y && \
     mkdir -p /opt/openshift
 
-# Install Maven 3.6.1
-ENV MAVEN_VERSION 3.6.1
+# Install Maven 3.6.3
+ENV MAVEN_VERSION 3.6.3
 RUN (curl -fSL https://www-eu.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | \
     tar -zx -C /usr/local) && \
     mv /usr/local/apache-maven-$MAVEN_VERSION /usr/local/maven && \
